@@ -51,7 +51,7 @@ export GITTEST_REMOTE_SSH_PASSPHRASE=""
 
 
 # Can we ask Travis to cache this file?
-curl https://github.com/ethomson/poxyproxy/releases/download/v0.1.0/poxyproxy-0.1.0.jar >poxyproxy.jar || exit $?
+curl -L https://github.com/ethomson/poxyproxy/releases/download/v0.1.0/poxyproxy-0.1.0.jar >poxyproxy.jar || exit $?
 
 if [ -e ./libgit2_clar ]; then
     ./libgit2_clar -sonline::push -sonline::clone::ssh_cert &&
