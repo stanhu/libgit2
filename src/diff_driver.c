@@ -493,6 +493,7 @@ static long diff_context_find(
 	if (out_size > (long)ctxt->line.size)
 		out_size = (long)ctxt->line.size;
 	memcpy(out, ctxt->line.ptr, (size_t)out_size);
+	out[out_size-1] = '\0';
 
 	return out_size;
 }
